@@ -1,0 +1,19 @@
+class dipendente {
+ 
+    constructor (nome, cognome, stipendio, mansione) {
+        this.nome = nome;
+        this.cognome = cognome;
+        this.stipendio = stipendio;
+        this.mansione = mansione;
+    }
+    stampa() {
+        return "nome dipendente: " + this.nome + "cognome dipendente: " + this.cognome 
+        + "stipendio: " + this.stipendio + "mansione: " + this.mansione; 
+    }
+}
+    var d1 = new dipendente("Sara", "Rossi ", 1000 , "operaio");
+    var d2 = new dipendente("Max ", "Power ", 2000 , "impiegata");
+    var d3 = new dipendente("Mara ", "Maionchi ", 3000 , "dirigente");
+ 
+    console.log(d1.stipendio);
+    console.log(d2.stampa());
