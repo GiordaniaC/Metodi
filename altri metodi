@@ -1,0 +1,47 @@
+class Dipendente {
+ 
+    constructor (nome, cognome, stipendio, mansione) {
+        this.nome = nome;
+        this.cognome = cognome;
+        this.stipendio = stipendio;
+        this.mansione = mansione;
+    }
+    stampa() {
+        return "nome dipendente: " + this.nome + "\n" + "cognome dipendente: " + this.cognome 
+        + "\n" + "stipendio: " + this.stipendio + "\n" + "mansione: " + this.mansione; 
+    }
+    bonus() {
+        this.stipendio += 200;
+    }
+    setStipendio(newStipendio) {
+        this.stipendio = newStipendio;
+    }
+}
+
+    var listaDipendenti = [];
+    var d1 = new Dipendente("Sara", "Rossi ", 1800 , "programmatrice");
+    var d2 = new Dipendente("Max ", "Power ", 2000 , "impiegato");
+    var d3 = new Dipendente("Mara ", "Maionchi ", 3000 , "PMO");
+ 
+    do {
+        var nome = prompt("inserisci nome");
+        var cognome = prompt("inserisci cognome");
+        var stipendio = parseInt(prompt("inserisci stipendio"));
+        var mansione = prompt("inserisci mansione");
+        var scelta = prompt("e per terminare");
+        var d4 = new Dipendente(nome , cognome , stipendio , mansione);
+        listaDipendenti.push(d4);
+    }
+    
+    while (scelta != "e")
+    
+    for (var i=0 ; i < listaDipendenti.length ; i++) {
+        console.log(listaDipendenti[i].stampa());
+        
+    }
+ 
+ 
+    
+    console.log(d2.stipendio);
+    d2.setStipendio(4000);
+    console.log(d2.stipendio);
